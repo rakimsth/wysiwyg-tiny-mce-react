@@ -1,16 +1,9 @@
 import React from "react";
-import { Editor } from "@tinymce/tinymce-react";
-import config from "./Config";
+import Editor from "./Editor";
 export default function App() {
   return (
     <>
-      <Editor
-        id="pageEditor"
-        apiKey="no-api-key"
-        initialValue="<p>Start Writing your Story...</p>"
-        onEditorChange={(newText) => console.log(newText, "new Text")}
-        init={config}
-      />
+      <Editor data="" onChange={(e) => console.log(e, "final Return")} />
     </>
   );
 }
